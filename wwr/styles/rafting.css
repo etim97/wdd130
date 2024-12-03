@@ -4,6 +4,14 @@
     --secondary-color: #A7A9B9;
     --accent1-color: #373E7C;
     --accent2-color: #1E203F;
+    --text-color: #FFFFFF;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -11,26 +19,38 @@ body {
     font-family: 'Roboto', 'Open Sans', sans-serif;
     background-color: var(--secondary-color);
     color: var(--primary-color);
+    line-height: 1.6;
 }
 
 /* Header */
 header {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
-    justify-content: space-between;
     padding: 10px 20px;
     background-color: var(--accent1-color);
-    color: #fff;
+    color: var(--text-color);
 }
 
 header img {
     height: 50px;
 }
 
+header h1 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
+header nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
 header nav a {
-    margin: 0 15px;
     text-decoration: none;
-    color: #fff;
+    color: var(--text-color);
     font-weight: bold;
 }
 
@@ -43,15 +63,14 @@ header nav a:hover {
     position: relative;
     text-align: center;
     background-color: var(--accent2-color);
-    color: #fff;
+    color: var(--text-color);
     padding: 20px;
 }
 
 .hero img {
     width: 100%;
     height: auto;
-    display: block;
-    margin: 0 auto;
+    border-radius: 8px;
 }
 
 .hero h1 {
@@ -59,7 +78,7 @@ header nav a:hover {
     top: 20%;
     left: 50%;
     transform: translate(-50%, -20%);
-    font-size: 2.5em;
+    font-size: 2.5rem;
     color: var(--secondary-color);
 }
 
@@ -78,7 +97,7 @@ header nav a:hover {
 .hero article img {
     float: right;
     margin: 0 0 10px 10px;
-    width: 200px;
+    width: 150px;
     height: auto;
     border-radius: 50%;
 }
@@ -91,18 +110,20 @@ header nav a:hover {
 
 .history-section h2 {
     color: var(--accent1-color);
+    text-align: center;
+    margin-bottom: 1rem;
 }
 
 .history-section .section1 {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 20px;
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .history-section .section1 img {
     max-width: 300px;
-    margin: 10px;
+    border-radius: 8px;
 }
 
 /* Adventure Section */
@@ -112,20 +133,20 @@ header nav a:hover {
 }
 
 .adventure-section h2 {
-    color: #fff;
+    color: var(--text-color);
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .adventure-section .fig-images {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 10px;
-    justify-content: center;
+    text-align: center;
 }
 
 .adventure-section figure {
-    max-width: 200px;
-    text-align: center;
+    color: var(--text-color);
 }
 
 .adventure-section figure img {
@@ -134,44 +155,63 @@ header nav a:hover {
 }
 
 .adventure-section figure figcaption {
-    color: #fff;
-    font-size: 0.9em;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
 
 /* Footer */
 footer {
     background-color: var(--accent1-color);
-    color: #fff;
+    color: var(--text-color);
     text-align: center;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+footer .social-links {
+    display: flex;
+    justify-content: flex-end;  /* Aligns items to the right */  
+    justify-items: right;
+    gap: 10px;/* Space between icons */
+    
+}
+
+footer .social-links img {
+    width: 30px;
+    height: auto;
+    border-radius: 10%;
+    background-color: var(--secondary-color);
     padding: 10px;
 }
 
-footer nav a {
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-footer nav img {
-    width: 30px;
-    height: auto;
-}
-
-footer nav a img:hover {
-    opacity: 0.8;
+footer .social-links a img:hover {
+    filter: brightness(1.2);
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2em;
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    .hero article {
-        padding: 10px;
-    }
-
-    .history-section .section1,
-    .adventure-section .fig-images {
+    header nav {
         flex-direction: column;
+        gap: 10px;
+    }
+
+    .history-section .section1 {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .adventure-section .fig-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    footer .social-links {
+        flex-direction: column;
+        gap: 10px;
     }
 }

@@ -1,0 +1,419 @@
+/* Colors defined in :root pseudo-class */
+:root {
+    --primary-color: #0D0E24;
+    --secondary-color: #A7A9B9;
+    --accent1-color: #373E7C;
+    --accent2-color: #1E203F;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Open Sans', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: var(--accent1-color);
+    color: #fff;
+}
+
+header img {
+    height: 50px;
+}
+
+header nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    background-color: var(--accent2-color);
+    color: #fff;
+    padding: 20px;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    font-size: 2.5em;
+    color: var(--secondary-color);
+}
+
+.hero article {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.hero article img {
+    float: right;
+    margin: 0 0 10px 10px;
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* History Section */
+.history-section {
+    padding: 20px;
+    background-color: var(--secondary-color);
+}
+
+.history-section h2 {
+    color: var(--accent1-color);
+}
+
+.history-section .section1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.history-section .section1 img {
+    max-width: 300px;
+    margin: 10px;
+}
+
+/* Adventure Section */
+.adventure-section {
+    padding: 20px;
+    background-color: var(--accent2-color);
+}
+
+.adventure-section h2 {
+    color: #fff;
+    text-align: center;
+}
+
+.adventure-section .fig-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.adventure-section figure {
+    max-width: 200px;
+    text-align: center;
+}
+
+.adventure-section figure img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.adventure-section figure figcaption {
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* Footer */
+footer {
+    background-color: var(--accent1-color);
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+footer nav a {
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer nav img {
+    width: 30px;
+    height: auto;
+}
+
+footer nav a img:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px){} 
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero article {
+        padding: 10px;
+    }
+
+    .history-section .section1,
+    .adventure-section .fig-images {
+        flex-direction: column;
+    }
+
+
+/* *****************Contact Us Page styling starts here******************* */
+
+.contact-support {
+    margin: 10px auto;
+    background-color: #fce3e3;
+}
+
+.contact-support article {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding-bottom: 1em;
+    color: #fff;
+}
+
+.contact-support h4, p, form {
+    text-align: center;
+}
+
+.contact-support article div {
+    width: 350px;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+}
+
+.contact-support form {
+    background-color: var(--secondary-color);
+}
+
+button[type="button"] {
+    /* background-color: #da0416; */
+    margin: 10px;
+
+}
+
+button[type="button"]:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.fone {
+    display: flex;
+    font-style: italic;
+    max-width: 250px;
+}
+
+.fone img {
+    margin-left: 60px;
+}
+section elements styling/
+.company-info {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: var(--primary-color);
+}
+
+.company-info div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.company-info div, 
+h2, 
+.company-info h4 {
+    color: white;
+}
+
+.company-info p {
+    padding-left: 10px;
+}
+
+.sociallinks {
+    gap: 5px;
+}
+
+iframe {
+    border: none;
+    margin-right: 0;  
+}
+
+/* employee profile styling */
+.employee-profiles {
+    margin: 10px auto;
+    background-color: var(--secondary-color);
+}
+
+.employee-profiles h5 {
+    text-align: center;
+    border: 2px solid ;
+    border-width: 0 100px;
+    border-color: var(--secondary-color);
+    color: #fff;
+    background-color: var(--primary-color);
+    margin-top: 10px;
+}
+
+.employee-profiles h3 {
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.employee-profiles div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+}
+
+.employee-profiles div img {
+    justify-self: center;
+}
+
+@media screen and (max-width: 768px) {
+    .employee-profiles div {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .employee-profiles h5:first-of-type {
+        grid-row: 1;
+    }
+
+    .employee-profiles h5:nth-of-type(2) {
+        grid-row: 3;
+    }
+
+    .employee-profiles h5:last-of-type {
+        grid-row: 5;
+    }
+}
+
+Styling Forms Area/
+/* fieldset and Legend Styling */
+form {
+    background-color: #525151;
+    padding: 10px;
+    color: #fff;
+}
+
+fieldset {
+    margin: 10px 0;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 6px;
+    min-width: 200px;
+}
+
+legend {
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 700;
+    padding: 5px;
+    color: #fff;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+.name-email label {
+
+    text-align: start;
+    margin-left: 5em;
+}
+
+.name-email input {
+    padding: 5px;
+    border: 1px solid #000;
+    max-width: 300px;
+}
+
+input[type="email"], input[type="text"] {
+    width: 25em;
+}
+
+textarea {
+    min-height: 5em;
+    min-width: 100%;
+    padding: 5px;
+    border: 1px solid #000;
+    margin: 1em 0;
+}
+
+fieldset h4 {
+    margin-top: 1em;
+}
+
+Radio buttons and Check boxes/
+.radios {
+    margin-bottom: 1em;
+
+}
+
+input[type="checkbox"] + label, input[type="radio"] + label {
+    display: inline-block;
+}
+
+input[type="radio"]:first-of-type {
+    margin-left: 0;
+}
+
+styling the submit button/
+input[type="submit"] {
+    padding: .5em 1em;
+    border-radius: .25em;
+    background-color: #000;
+    color: #fff;
+    font-size: 1em;
+}
+
+input[type="submit"]:hover {
+    background-color: #fff;
+    color: var(--secondary-color);
+    font-weight: 700;
+    border: 2px solid #da0416;
+}
+
+@media screen and (min-width: 600px) {
+    fieldset {
+        width: 40%;
+        min-width: 320px;
+        margin: auto;
+    }
+    
+    .radios label {
+        display: inline-block;
+        padding-top: .5em;
+        margin-top: 0;
+        margin-right: .5em;
+    }
+
+    /* .name-email label {
+        margin-left: 0;
+    } */
+}
