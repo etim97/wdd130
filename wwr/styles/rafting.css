@@ -1,3 +1,4 @@
+/******************* About us **************************/
 /* Colors defined in :root pseudo-class */
 :root {
     --primary-color: #0D0E24;
@@ -14,11 +15,13 @@
     box-sizing: border-box;
 }
 
+/* General Styles */
 body {
-    margin: 0;
     font-family: 'Roboto', 'Open Sans', sans-serif;
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
+    background-color: var(--secondary-color); /* Light background */
+    color: var(--primary-color); /* Dark text */
+    margin: 0;
+    padding: 0;
     line-height: 1.6;
 }
 
@@ -28,8 +31,8 @@ header {
     grid-template-columns: auto 1fr;
     align-items: center;
     padding: 10px 20px;
-    background-color: var(--accent1-color);
-    color: var(--text-color);
+    background-color: var(--accent1-color); /* Accent background */
+    color: var(--text-color); /* Dark text on accent background */
 }
 
 header img {
@@ -38,7 +41,7 @@ header img {
 
 header h1 {
     font-size: 1.5rem;
-    color: var(--text-color);
+    color: var(--text-color); /* Dark text */
     margin-left: 10px;
 }
 
@@ -50,20 +53,21 @@ header nav {
 
 header nav a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text-color); /* Dark color for contrast */
     font-weight: bold;
 }
 
 header nav a:hover {
     text-decoration: underline;
+    color: #FFFFFF; /* White for better hover contrast */
 }
 
 /* Hero Section */
 .hero {
     position: relative;
     text-align: center;
-    background-color: var(--accent2-color);
-    color: var(--text-color);
+    background-color: var(--accent2-color); /* Contrast with dark text */
+    color: var(--text-color); /* Dark text */
     padding: 20px;
 }
 
@@ -79,7 +83,7 @@ header nav a:hover {
     left: 50%;
     transform: translate(-50%, -20%);
     font-size: 2.5rem;
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Secondary color */
 }
 
 .hero article {
@@ -89,7 +93,7 @@ header nav a:hover {
     transform: translate(-50%, -50%);
     max-width: 600px;
     text-align: left;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
     padding: 20px;
     border-radius: 8px;
 }
@@ -105,11 +109,11 @@ header nav a:hover {
 /* History Section */
 .history-section {
     padding: 20px;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color); /* Light background */
 }
 
 .history-section h2 {
-    color: var(--accent1-color);
+    color: var(--accent1-color); /* Accent color for headings */
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -129,11 +133,11 @@ header nav a:hover {
 /* Adventure Section */
 .adventure-section {
     padding: 20px;
-    background-color: var(--accent2-color);
+    background-color: var(--accent2-color); /* Contrast with light text */
 }
 
 .adventure-section h2 {
-    color: var(--text-color);
+    color: var(--text-color); /* Dark text */
     text-align: center;
     margin-bottom: 1rem;
 }
@@ -146,7 +150,7 @@ header nav a:hover {
 }
 
 .adventure-section figure {
-    color: var(--text-color);
+    color: var(--text-color); /* Dark text */
 }
 
 .adventure-section figure img {
@@ -162,8 +166,8 @@ header nav a:hover {
 
 /* Footer */
 footer {
-    background-color: var(--accent1-color);
-    color: var(--text-color);
+    background-color: var(--accent1-color); /* Accent color */
+    color: var(--text-color); /* Dark text for footer */
     text-align: center;
     padding: 10px;
     font-size: 0.9rem;
@@ -172,21 +176,19 @@ footer {
 footer .social-links {
     display: flex;
     justify-content: flex-end;  /* Aligns items to the right */  
-    justify-items: right;
-    gap: 10px;/* Space between icons */
-    
+    gap: 10px; /* Space between icons */
 }
 
 footer .social-links img {
     width: 30px;
     height: auto;
     border-radius: 10%;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color); /* Light background */
     padding: 10px;
 }
 
 footer .social-links a img:hover {
-    filter: brightness(1.2);
+    filter: brightness(1.2); /* Slight hover effect for visibility */
 }
 
 /* Responsive Design */
@@ -215,6 +217,11 @@ footer .social-links a img:hover {
         gap: 10px;
     }
 }
+
+
+
+
+/*************** contact us *************************?
 /* General Styles */
 body {
     font-family: 'Static', sans-serif; /* Text Font */
